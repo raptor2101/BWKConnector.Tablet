@@ -4,12 +4,12 @@ import java.util.List;
 
 import android.content.Intent;
 import android.widget.ListAdapter;
-import de.raptor2101.BattleWorldsKronos.Connector.Gui.GameInfoAdapater;
+import de.raptor2101.BattleWorldsKronos.Connector.Data.Entities.Game;
+import de.raptor2101.BattleWorldsKronos.Connector.Gui.GameViewAdapater;
 import de.raptor2101.BattleWorldsKronos.Connector.Gui.R;
-import de.raptor2101.BattleWorldsKronos.Connector.JSON.GameInfo;
 
 public class GameListingActivity extends AbstractGameListingActivity{
-  private GameInfoAdapater mAdapter = new GameInfoAdapater(this);
+  private GameViewAdapater mAdapter = new GameViewAdapater(this);
   
   public GameListingActivity() {
     super(R.layout.game_listing_activity);
@@ -23,14 +23,19 @@ public class GameListingActivity extends AbstractGameListingActivity{
     startActivity(intent);
   }
 
+
+
   @Override
-  protected ListAdapter getGameInfoAdapter() {
+  protected ListAdapter getGamesAdapter() {
     return mAdapter;
   }
 
+
+
   @Override
-  protected void setGameInfos(List<GameInfo> games) {
-    mAdapter.setGameInfos(games);
+  protected void setGames(List<Game> games) {
+    mAdapter.setGames(games);
+    
   }
   
 }
