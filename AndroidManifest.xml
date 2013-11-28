@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.raptor2101.BattleWorldsKronos.Connector.Gui"
-    android:versionCode="3001"
-    android:versionName="0.1.0 (Tablet)" >
+    android:versionCode="3004"
+    android:versionName="0.1.2 (Tablet)" >
 	<supports-screens android:smallScreens="false"
         android:normalScreens="false"
         android:largeScreens="true"
